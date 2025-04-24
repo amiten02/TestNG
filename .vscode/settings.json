@@ -1,0 +1,47 @@
+{
+  // Java configuration
+  "java.configuration.runtimes": [
+    {
+      "name": "JavaSE-17",
+      "path": "C:/Program Files/Java/jdk17", // 🔁 Replace with your JDK 8 path
+      "default": true
+    }
+  ],
+  "java.compile.nullAnalysis.mode": "automatic",
+  "java.format.settings.url": "https://raw.githubusercontent.com/google/styleguide/gh-pages/eclipse-java-google-style.xml",
+  "java.format.settings.profile": "GoogleStyle",
+  // Maven
+  "maven.executable.path": "C:/Users/amit/AppData/Local/Programs/Java/apache-maven-3.9.9/bin/mvn.cmd",
+  "maven.terminal.useJavaHome": true,
+  // TestNG support
+  "java.test.config": [
+    {
+      "name": "TestNG",
+      "workingDirectory": "${workspaceFolder}",
+      "args": [
+        "-testjar",
+        "${workspaceFolder}/target/TestAutomation-1.0-SNAPSHOT.jar"
+      ]
+    }
+  ],
+  // Cucumber Gherkin formatting
+  "[gherkin]": {
+    "editor.quickSuggestions": {
+      "other": true,
+      "comments": true,
+      "strings": true
+    },
+    "editor.wordWrap": "on"
+  },
+  // General
+  "editor.formatOnSave": true,
+  "files.autoSave": "onFocusChange",
+  "code-runner.saveFileBeforeRun": true,
+  "files.exclude": {
+    "**/target": false,
+    "**/.classpath": true,
+    "**/.project": true
+  },
+  "java.test.report.showAfterExecution": "always",
+  "java.configuration.updateBuildConfiguration": "automatic"
+}
