@@ -1,0 +1,27 @@
+pipeline {
+    agent any
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building the application...'
+            }
+        }
+        stage('Test') {
+            steps {
+                script {
+                    try {
+                        echo 'Running tests...'
+                        // Custom test logic
+                    } catch (Exception e) {
+                        echo "Test failed: ${e.getMessage()}"
+                    }
+                }
+            }
+        }
+        stage('Deploy') {
+            steps {
+                echo 'Deploying the application...'
+            }
+        }
+    }
+}
